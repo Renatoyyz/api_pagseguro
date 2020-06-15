@@ -19,7 +19,7 @@ routes.get('/teste', (req, res) => {
             response = resp;
         })
     
-    return res.json({ok: true});
+    return res.json({ok: true, nome: "Renato"});
 });
 
 export default routes;
