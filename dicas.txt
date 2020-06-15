@@ -1,0 +1,16 @@
+Problema com migrate:
+
+Quando se cria uma tabela com o comando 
+    1 - yarn sequelize migration:create --name=create-users //user é o nome da table
+    2 - yarn sequelize db:migrate
+
+e essa tabela tem uma foreignKey usando references, se usando o db Mysql não funciona se esse campo for not null:
+user_id:{
+          type: Sequelize.INTEGER,
+          references: { model: 'users', key: 'id' },
+          onUpdate: 'CASCADE',
+          onDelete: 'SET NULL',
+          // allowNull: false, // essa linha não funciona no MySql mas no postgres funciona
+        },
+
+//-------------------------------------------------------------------------------------------------

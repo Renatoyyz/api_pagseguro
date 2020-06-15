@@ -1,0 +1,39 @@
+Projeto: TaskList
+Autor: Renato Oliveira
+Data de Inicio: 09/06/2020
+Referencia:
+Curso completo de APIs com Nodejs, Express + MongoDB, SQL
+
+Inicio:
+1 - yarn init -y
+2 - yarn add express
+3 - yarn add nodemon sucrase -D
+4 - yarn add sequelize
+5 - yarn add sequelize-cli -D
+6 - yarn add mysql2
+7 - yarn add pg pg-hstore //Se for Postgres
+
+Para criar table:
+1 - yarn sequelize migration:create --name=create-users //user é o nome da table
+    yarn sequelize db:migrate //Aqui roda as migrations
+    yarn sequelize db:migrate:undo //Aqui desfaz a ultima migration para fazer alterações
+    yarn sequelize db:migrate:undo:all //Aqui desfaz todas as migration para fazer alterações
+
+Para criptografia:
+1 - yarn add bcryptjs
+
+Trabalhar JWT - JSON WEB TOKEN - Ref Aula 38 
+1 - yarn add jsonwebtoken => 1:00 - 1:30
+
+Para Validações:
+1 - yarn add yup
+
+Para permissoes de acesso de ip url, etc...
+1 - yarn add cors
+
+Para trabalhar com build query:
+1 - yarn add locutus // Link para consulta: https://locutus.io/php/url/http_build_query/
+
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+yarn eslint --fix src --ext .js
